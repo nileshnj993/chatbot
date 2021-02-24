@@ -8,7 +8,7 @@ app = Flask(__name__)
 english_bot = ChatBot("umesh", storage_adapter="chatterbot.storage.SQLStorageAdapter", database_uri =  'sqlite:///database.sqlite3', logic_adapters = ['chatterbot.logic.BestMatch', 'chatterbot.logic.TimeLogicAdapter'])
 
 trainer = ListTrainer(english_bot)
-trainer.train(["Hello!", "I am umesh", "How are you", "I am fine", "What are you doing", "ur mum"])
+trainer.train(["Hello!", "I am umesh", "How are you", "I am fine", "What are you doing", "Learning how to talk"])
 trainer = ChatterBotCorpusTrainer(english_bot)
 trainer.train("chatterbot.corpus.english")
 
